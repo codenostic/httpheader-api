@@ -1,9 +1,8 @@
 var express = require("express");
 var app = express();
+var route = require(process.cwd()+"/app/routes/routes.js");
 
-app.get('/', function(req, res){
-    res.sendFile(process.cwd()+'/public/index.html');
-});
+route(app);
 
 app.listen(process.env.PORT || 8080, function(err){
     if(err) throw err;
