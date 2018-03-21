@@ -4,7 +4,7 @@
 // init project
 const express = require('express')
 const app = express()
-
+const parse = require('parse-headers');
 // we've started you off with Express, 
 // but feel free to use whatever libs or frameworks you'd like through `package.json`.
 
@@ -17,7 +17,7 @@ app.get("/", (request, response) => {
 })
 
 app.get("/api/whoami", (request, response) => {
-  
+  response.send(parse(request.headers))
 })
 
 
