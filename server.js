@@ -3,8 +3,8 @@
 
 // init project
 const express = require('express')
-const app = express()
-var httpHeaders = require('http-headers');
+const app = express();
+var httpController = require('./controllers/httpController');
 
 // we've started you off with Express, 
 // but feel free to use whatever libs or frameworks you'd like through `package.json`.
@@ -17,10 +17,7 @@ app.get("/", (request, response) => {
   response.sendFile(__dirname + '/views/index.html')
 })
 
-app.get("/api/whoami", (request, response) => {
-  var headerResult = {};
-  response.send(httpHeaders(response));
-})
+app.get("/api/whoami", httpController.parse)
 
 
 // listen for requests :)
