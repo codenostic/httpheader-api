@@ -1,6 +1,9 @@
-HTTP header parser 
+[HTTP header parser](https://glitch.com/edit/#!/fcc-header-ms?path=README.md:1:0)
 =================
+Click above link and click `show` in header to get app live.
 
+Objective 
+-----------
 This is a simple API to get system information of your browser system. 
 If you type /api/whoami - you will get IP address, Clients Operating System information and Language preference of client. 
 
